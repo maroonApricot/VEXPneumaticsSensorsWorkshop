@@ -21,12 +21,19 @@
 
 using namespace vex;
 
+event detectObject = event();
+
 void touchLightSensorStation(){
 
 }
 
 void visionSensorStation(){
-
+  Brain.Screen.clearLine(1);
+  Brain.Screen.setCursor(1,1);
+  visionSensor.takeSnapshot(visionSensor__BUMPER);
+  if (visionSensor.objectCount > 0){
+    Brain.Screen.print("Bumper found");
+  }
 }
 
 void inertialSensorStation(){
@@ -40,9 +47,14 @@ void pneumaticsSensorStation(){
 int main() {
   // Initializing Robot Configuration. DO NOT REMOVE!
   vexcodeInit();
+  detectObject(visionSensorStation);
+  wait(15,msec);
   while (true)
   {
-    //Put the method youre testing here
+    /*Put the method youre testing here*/
+
+    //Vision
+    //detectObject.broadcastAndWait();
     wait(100, msec);
   }
 }

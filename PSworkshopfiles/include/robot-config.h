@@ -4,7 +4,18 @@ extern brain Brain;
 
 // VEXcode devices
 extern controller controller1;
-extern motor motor1;
+extern motor leftMotor;
+extern motor rightMotor;
+
+//signatures
+using signature = vision::signature;
+extern signature visionSensor__BUMPER;
+extern signature visionSensor__SIG_2;
+extern signature visionSensor__SIG_3;
+extern signature visionSensor__SIG_4;
+extern signature visionSensor__SIG_5;
+extern signature visionSensor__SIG_6;
+extern signature visionSensor__SIG_7;
 
 //Sensors
 extern vision visionSensor;

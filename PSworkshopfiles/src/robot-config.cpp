@@ -9,11 +9,15 @@ brain  Brain;
 
 // VEXcode device constructors
 controller controller1 = controller(primary);
-motor cotor1 = motor(PORT1, ratio18_1, false); //repurposed for each station
+motor leftMotor = motor(PORT1, ratio18_1, false);
+motor rightMotor = motor(PORT10, ratio18_1, true);
+
+//Signatures will have some format similar to the following:
+signature visionSensor__BUMPER = signature (1, 4633, 8495, 6564, -2953, -863, -1908, 2.2, 0);
 
 //Sensors
 inertial InertialSensor = inertial(PORT2);
-vision visionSensor = vision(PORT3);
+vision visionSensor = vision (PORT3, 50, visionSensor__BUMPER); //will also pass in signatures as arguments
 bumper bumperSwitch = bumper(Brain.ThreeWirePort.C);
 limit limitSwitch = limit(Brain.ThreeWirePort.D);
 light lightSwitch = light(Brain.ThreeWirePort.E);
