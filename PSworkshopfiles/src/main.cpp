@@ -22,7 +22,7 @@
 using namespace vex;
 
 event detectObject = event();
-int joystickDeadband = 10;// Get the velocity percentage of the left motor. (Axis3)
+int joystickDeadband = 10;
 int squarebotFB = 0; //forward&backward
 int squarebotRL = 0; //left&right
 
