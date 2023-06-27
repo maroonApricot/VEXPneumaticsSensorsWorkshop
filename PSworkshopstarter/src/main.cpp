@@ -11,11 +11,10 @@
 // Robot Configuration:
 // [Name]               [Type]        [Port(s)]
 // Controller1          controller                    
-// Drivetrain           drivetrain    1, 10           
-// InertialSensor       inertial      2               
-// LimitSwitchD         limit         D               
-// LightE               light         E               
-// DigitalOutA          digital_out   A               
+// Motor1               motor         1                            
+// InertialSensor       inertial      2
+// Solenoid1            digital_out   A 
+// Solenoid2            digital_out   B                               
 // ---- END VEXCODE CONFIGURED DEVICES ----
 
 #include "vex.h"
@@ -44,16 +43,16 @@ void visionSensorStation(){
 }
 
 void inertialSensorStation(){
-  InertialSensor.calibrate();
+  inertialSensor.calibrate();
   // waits for the Inertial Sensor to calibrate
-  while (InertialSensor.isCalibrating()) {
+  while (inertialSensor.isCalibrating()) {
     wait(100, msec);
   }
   // make the drivetrain drive 1 foot forward here
   while (true){ //stub: replace with condition to turn right while heading is less than 90 degrees
     //turn right (do not use turnFor)
   }
-  Drivetrain.stop();
+  squarebot.stop();
   //make thhe drivetrain drive another foot forward
   wait(1, seconds);
 }
