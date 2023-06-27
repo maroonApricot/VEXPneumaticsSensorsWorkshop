@@ -20,10 +20,8 @@ extern signature visionSensor__SIG_7;
 
 //Sensors
 extern vision visionSensor;
-extern bumper bumperSwitch;
 extern limit limitSwitch;
-extern light lightSwitch;
-extern line lineTracker;
+extern light lightSensor;
 extern inertial inertialSensor;
 
 //Pneumatics

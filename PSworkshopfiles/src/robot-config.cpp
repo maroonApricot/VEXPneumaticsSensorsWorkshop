@@ -19,10 +19,8 @@ signature visionSensor__BUMPER = signature (1, 4633, 8495, 6564, -2953, -863, -1
 //Sensors
 inertial InertialSensor = inertial(PORT2);
 vision visionSensor = vision (PORT3, 50, visionSensor__BUMPER); //will also pass in signatures as arguments
-bumper bumperSwitch = bumper(Brain.ThreeWirePort.C);
 limit limitSwitch = limit(Brain.ThreeWirePort.D);
-light lightSwitch = light(Brain.ThreeWirePort.E);
-line lineTracker =  line(Brain.ThreeWirePort.F);
+light lightSensor = light(Brain.ThreeWirePort.E);
 
 //Pneumatics
 digital_out solenoid1 = digital_out(Brain.ThreeWirePort.A);
