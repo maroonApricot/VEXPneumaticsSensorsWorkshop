@@ -11,6 +11,7 @@ brain  Brain;
 controller controller1 = controller(primary);
 motor leftMotor = motor(PORT1, ratio18_1, false);
 motor rightMotor = motor(PORT10, ratio18_1, true);
+drivetrain squarebot = drivetrain(leftMotor,rightMotor);
 
 //Signatures will have some format similar to the following:
 signature visionSensor__BUMPER = signature (1, 4633, 8495, 6564, -2953, -863, -1908, 2.2, 0);

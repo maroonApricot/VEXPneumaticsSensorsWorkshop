@@ -37,11 +37,34 @@ void visionSensorStation(){
 }
 
 void inertialSensorStation(){
-  
+  inertialSensor.calibrate();
+  // waits for the Inertial Sensor to calibrate
+  while (inertialSensor.isCalibrating()) {
+    wait(100, msec);
+  }
+  // Moves robot 1 ft forward
+  squarebot.driveFor(forward, 12, distanceUnits::in);
+  // Turns until the motor reaches a 90 degree turn
+  while (!(inertialSensor.heading(degrees) >= 90.0)){
+    squarebot.turn(right);
+  }
+  squarebot.stop();
+  squarebot.driveFor(forward, 12, distanceUnits::in);
+  wait(1, seconds);
 }
 
 void pneumaticsSensorStation(){
-  solenoid1.set(true);
+  if (controller1.ButtonA.pressing()){
+    solenoid1.set(true);
+  } else {
+    solenoid1.set(false);
+  }
+  if (controller1.ButtonB.pressing()){
+    solenoid2.set(true);
+  } else {
+    solenoid2.set(false);
+  }
+  
 }
 
 int main() {
@@ -55,6 +78,13 @@ int main() {
 
     //Vision
     //detectObject.broadcastAndWait();
+    
+    //Inertial
+    //inertialSensorStation();
+    //break;
+
+    //Pneumatics
+    //pneumaticsSensorStation()
     wait(100, msec);
   }
 }
