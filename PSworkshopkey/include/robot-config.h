@@ -6,7 +6,6 @@ extern brain Brain;
 extern controller controller1;
 extern motor leftMotor;
 extern motor rightMotor;
-extern drivetrain squarebot;
 
 //signatures
 using signature = vision::signature;
