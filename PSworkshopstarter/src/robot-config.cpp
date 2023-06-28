@@ -9,13 +9,12 @@ brain  Brain;
 
 // VEXcode device constructors
 controller Controller1 = controller(primary);
-motor LeftDriveSmart = motor(PORT1, ratio18_1, false);
-motor RightDriveSmart = motor(PORT10, ratio18_1, true);
-drivetrain Drivetrain = drivetrain(LeftDriveSmart, RightDriveSmart, 319.19, 295, 40, mm, 1);
 inertial InertialSensor = inertial(PORT2);
 limit LimitSwitch = limit(Brain.ThreeWirePort.D);
 light LightSensor = light(Brain.ThreeWirePort.E);
 digital_out Solenoid = digital_out(Brain.ThreeWirePort.A);
+motor LeftMotor = motor(PORT1, ratio18_1, false);
+motor RightMotor = motor(PORT10, ratio18_1, true);
 
 // VEXcode generated functions
 // define variable for remote controller enable/disable

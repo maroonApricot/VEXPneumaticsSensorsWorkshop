@@ -11,11 +11,12 @@
 // Robot Configuration:
 // [Name]               [Type]        [Port(s)]
 // Controller1          controller                    
-// Drivetrain           drivetrain    1, 10           
 // InertialSensor       inertial      2               
 // LimitSwitch          limit         D               
 // LightSensor          light         E               
 // Solenoid             digital_out   A               
+// LeftMotor            motor         1               
+// RightMotor           motor         10              
 // ---- END VEXCODE CONFIGURED DEVICES ----
 
 #include "vex.h"
