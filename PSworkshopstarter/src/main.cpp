@@ -54,7 +54,6 @@ void inertialSensorStation(){
   while (true){ //stub: replace with condition to turn right while heading is less than 90 degrees
     //turn right (do not use turnFor)
   }
-  Drivetrain.stop();
   //make thhe drivetrain drive another foot forward
   wait(1, seconds);
 }
