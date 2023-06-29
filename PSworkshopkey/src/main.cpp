@@ -66,7 +66,7 @@ void inertialSensorStation(){
   rightMotor.spinFor(forward, 3, timeUnits::sec);
   while (inertialSensor.heading(degrees) < 90.0){ //Turn right while heading is less than 90 degrees
     leftMotor.spin(forward);
-    rightMotor.spin(backward);
+    rightMotor.spin(reverse);
   }
   leftMotor.stop();
   rightMotor.stop();
