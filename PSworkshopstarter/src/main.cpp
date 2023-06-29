@@ -39,7 +39,7 @@ void visionSensorStation(){
   Brain.Screen.clearLine(1);
   Brain.Screen.setCursor(1,1);
   //take a snapshot here
-  if (true){ //stub: replace with conditional to detect object
+  if (true){ //stub: replace with conditional to detect object (hint: object count)
     //print something to the screen
   }
 }
